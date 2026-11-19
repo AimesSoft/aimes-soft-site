@@ -27,7 +27,7 @@ export default function Home() {
           className="brand-backdrop-image object-contain"
         />
       </div>
-      <header className="relative z-20 mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 pt-6 sm:px-8 lg:px-10">
+      <header className="relative z-20 mx-auto flex w-full max-w-7xl items-center px-5 pt-6 sm:px-8 lg:px-10">
         <a
           href="/"
           className="inline-flex items-center gap-2.5 text-base leading-none text-white transition hover:opacity-85"
@@ -39,34 +39,8 @@ export default function Home() {
             height={28}
             className="h-7 w-7 object-contain"
           />
-          <span className="tracking-tight">
-            <span className="font-normal">Aimes</span>
-            <strong className="font-bold">Soft</strong>
-          </span>
+          <span className="font-semibold tracking-tight">AimesSoft</span>
         </a>
-        <nav
-          aria-label="Site"
-          className="flex items-center gap-5 text-sm text-white/75 sm:gap-7"
-        >
-          <a href="#projects" className="hidden transition hover:text-white sm:inline">
-            Projects
-          </a>
-          <a href="#ecosystem" className="hidden transition hover:text-white sm:inline">
-            Frameworks
-          </a>
-          <a href="/research/" className="transition hover:text-white">
-            <span className="font-normal">AimesSoft</span>{" "}
-            <strong className="font-bold text-white">Research</strong>
-          </a>
-          <a
-            href="https://github.com/AimesSoft"
-            target="_blank"
-            rel="noreferrer"
-            className="hidden transition hover:text-white sm:inline"
-          >
-            GitHub
-          </a>
-        </nav>
       </header>
 
       <section className="relative mx-auto flex min-h-[82svh] w-full max-w-7xl flex-col justify-center px-5 pb-16 pt-14 sm:px-8 lg:px-10">
@@ -75,9 +49,9 @@ export default function Home() {
             人工智能，时间和爱。
           </div>
 
-          <h1 className="max-w-5xl text-balance text-[clamp(4.25rem,14vw,12.5rem)] leading-[0.84] tracking-tight">
-            <span className="block font-normal text-white/90">Aimes</span>
-            <span className="block font-black text-white">Soft</span>
+          <h1 className="max-w-5xl text-balance text-[clamp(4.25rem,14vw,12.5rem)] font-black leading-[0.82] tracking-normal">
+            Aimes
+            <span className="block text-white/84">Soft</span>
           </h1>
 
           <p className="mt-8 max-w-2xl text-balance text-lg leading-8 text-white sm:text-xl">
