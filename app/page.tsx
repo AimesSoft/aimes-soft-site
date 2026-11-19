@@ -43,7 +43,7 @@ export default function Home() {
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">
-            <TextLink href="/research/zh/" label="AimesSoft Research" />
+            <TextLink href="/research/" label="AimesSoft Research" />
             <TextLink href="https://bern.aimes-soft.com" label="Bern" />
             <TextLink href="https://github.com/AimesSoft" label="GitHub" />
           </div>
@@ -218,9 +218,9 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <TextLink href="/research/zh/" label="进入 Research" />
+            <TextLink href="/research/" label="进入 Research" />
             <TextLink
-              href="/research/zh/tr-2026-01/"
+              href="/research/tr-2026-01/"
               label="AIMESSOFT-TR-2026-01"
             />
           </div>

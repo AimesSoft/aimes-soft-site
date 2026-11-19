@@ -151,7 +151,7 @@ export const studioPillars = [
 ];
 
 export const quickLinks = [
-  { label: "Research", href: "/research/zh/" },
+  { label: "Research", href: "/research/" },
   { label: "GitHub", href: "https://github.com/AimesSoft" },
   { label: "NipaPlay", href: "https://nipaplay.aimes-soft.com" },
   { label: "Erika", href: "https://erika.aimes-soft.com" },
