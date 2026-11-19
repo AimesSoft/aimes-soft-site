@@ -17,15 +17,15 @@ export const featuredProjects: Project[] = [
     name: "NipaPlay Reload",
     subtitle: "跨平台本地视频播放器",
     description:
-      "面向追番和个人媒体库的播放器，覆盖桌面与移动端，集成弹幕、字幕、多音轨、Bangumi 同步和 Emby/Jellyfin 挂载。",
+      "面向追番和个人媒体库的播放器，覆盖桌面与移动端，集成弹幕、字幕、多音轨、Bangumi 同步、Emby/Jellyfin 挂载，以及由 agent 驱动的 NipaPlay Next 模式。",
     category: "Media",
     status: "Active",
     accent: "#ffffff",
     repo: "https://github.com/AimesSoft/NipaPlay-Reload",
     website: "https://nipaplay.aimes-soft.com",
-    stars: "1.5k+",
+    stars: "1.8k+",
     tech: ["Flutter", "Rust", "mpv", "Dart FFI"],
-    highlights: ["弹幕与字幕", "媒体库挂载", "JS 插件系统"],
+    highlights: ["弹幕与字幕", "媒体库挂载", "NipaPlay Next"],
   },
   {
     name: "Misuzu Music",
@@ -49,6 +49,7 @@ export const featuredProjects: Project[] = [
     status: "Active",
     accent: "#ffffff",
     repo: "https://github.com/AimesSoft/SakiEngine",
+    website: "https://sakiengine.aimes-soft.com",
     stars: "35+",
     tech: ["Flutter", "Node.js", "Script DSL"],
     highlights: ["类 Ren'Py 语法", "自动项目创建", "跨平台发布"],
@@ -71,6 +72,34 @@ export const featuredProjects: Project[] = [
 
 export const ecosystemProjects: Project[] = [
   {
+    name: "Bern",
+    subtitle: "Rust 跨平台原生 UI 框架",
+    description:
+      "一份 Rust 声明编译为 SwiftUI、WinUI 3、GTK 4、Jetpack Compose 与 Web 原生界面，不捆绑浏览器内核，并在编译期检查缺失翻译与窄屏布局，同时为 agent 生成可按名称操作的控制接口。",
+    category: "Framework",
+    status: "Active",
+    accent: "#ffffff",
+    repo: "https://github.com/AimesSoft/Bern",
+    website: "https://bern.aimes-soft.com",
+    stars: "—",
+    tech: ["Rust", "SwiftUI", "WinUI 3", "GTK 4", "Compose"],
+    highlights: ["全平台原生控件", "编译期界面检查", "Agent 原生控制"],
+  },
+  {
+    name: "liberika",
+    subtitle: "Rust 播放器内核",
+    description:
+      "用 Rust 与 WebAssembly 构建的跨平台播放内核，承载视频解码、时钟同步、字幕与弹幕渲染等底层能力。",
+    category: "Kernel",
+    status: "Active",
+    accent: "#ffffff",
+    repo: "https://github.com/AimesSoft/liberika",
+    website: "https://liberika.aimes-soft.com",
+    stars: "—",
+    tech: ["Rust", "FFmpeg", "WebAssembly"],
+    highlights: ["解码同步", "字幕弹幕", "跨平台内核"],
+  },
+  {
     name: "Nipaplay Plugins",
     subtitle: "播放器插件市场",
     description:
@@ -83,51 +112,27 @@ export const ecosystemProjects: Project[] = [
     tech: ["JavaScript", "Plugin Runtime"],
     highlights: ["插件分发", "轻量扩展", "官方目录"],
   },
-  {
-    name: "AgentBridge OneBot",
-    subtitle: "Agent 与 QQ 群连接层",
-    description:
-      "把 Agent 接入 OneBot 协议生态的桥接工具，让自动化智能体可以进入社群场景。",
-    category: "Agent",
-    status: "Experiment",
-    accent: "#ffffff",
-    repo: "https://github.com/AimesSoft/agentbridge-onebot",
-    stars: "2",
-    tech: ["Python", "OneBot", "Agent"],
-    highlights: ["QQ 群接入", "消息桥接", "自动化实验"],
-  },
-  {
-    name: "Erika",
-    subtitle: "Rust 播放器内核",
-    description:
-      "为 NipaPlay 视频体验服务的 Rust 播放器内核方向，承载解码、同步、叠加和渲染等底层能力。",
-    category: "Kernel",
-    status: "Internal Core",
-    accent: "#ffffff",
-    repo: "https://github.com/AimesSoft/Erika",
-    stars: "3",
-    tech: ["Rust", "Rendering", "Playback"],
-    highlights: ["解码同步", "叠加渲染", "底层内核"],
-  },
 ];
 
 export const studioPillars = [
   {
-    title: "跨平台产品",
-    text: "以 Flutter 与 Rust 为主轴，把桌面、移动端和 Web 的体验放在同一套产品语言里打磨。",
+    title: "跨平台产品与框架",
+    text: "围绕 Rust 与 Flutter 构建桌面、移动端与 Web 应用，以及直接编译为各平台原生界面的 UI 框架 Bern。",
   },
   {
     title: "媒体与创作工具",
-    text: "从视频播放器、音乐播放器到绘画软件，优先解决长期使用场景里的细节体验。",
+    text: "从视频播放器、音乐播放器到绘画软件与视觉小说引擎，专注长期使用场景里的底层性能与细节。",
   },
   {
-    title: "引擎与基础设施",
-    text: "把播放器内核、脚本引擎、插件市场和构建流程沉淀成可复用能力。",
+    title: "内核与 Agent 基础设施",
+    text: "把播放内核、脚本引擎、意图驱动的 agent 运行时与技术研究沉淀成公开可复用的基础设施。",
   },
 ];
 
 export const quickLinks = [
+  { label: "Research", href: "/research/zh/" },
   { label: "GitHub", href: "https://github.com/AimesSoft" },
   { label: "NipaPlay", href: "https://nipaplay.aimes-soft.com" },
+  { label: "Bern", href: "https://bern.aimes-soft.com" },
   { label: "Misa Rin", href: "https://misarin.aimes-soft.com" },
 ];

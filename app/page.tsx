@@ -11,7 +11,7 @@ const projectButtonClassName =
   "inline-flex h-10 items-center rounded-lg border border-white/12 bg-white/7 px-3.5 text-sm font-medium text-white transition hover:border-white/28 hover:bg-white hover:!text-black hover:[&_*]:!text-black";
 
 export default function Home() {
-  const totalStars = 1700;
+  const totalStars = 2000;
 
   return (
     <main className="relative isolate min-h-screen overflow-hidden">
@@ -39,15 +39,20 @@ export default function Home() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-balance text-lg leading-8 text-white sm:text-xl">
-            一个围绕媒体体验、创作工具与智能体基础设施前进的独立软件工作室。我们把底层工程、跨平台体验和带有温度的产品细节放在同一条线上。
+            独立软件工作室，专注媒体系统、创作工具、跨平台原生框架与 agent 基础设施。
           </p>
 
+          <div className="mt-7 flex flex-wrap gap-3">
+            <TextLink href="/research/zh/" label="AimesSoft Research" />
+            <TextLink href="https://bern.aimes-soft.com" label="Bern" />
+            <TextLink href="https://github.com/AimesSoft" label="GitHub" />
+          </div>
         </div>
 
         <div className="relative z-10 mt-10 grid grid-cols-[repeat(2,max-content)] gap-x-8 gap-y-5 sm:grid-cols-[repeat(4,max-content)] sm:gap-x-12">
-          <Metric label="开源项目" value="10+" />
+          <Metric label="开源项目" value="15+" />
           <Metric label="GitHub Stars" value={`${totalStars}+`} />
-          <Metric label="产品方向" value="Media" />
+          <Metric label="研究与方向" value="Media & Agent" />
           <Metric label="核心栈" value="Rust / Flutter" />
         </div>
       </section>
@@ -160,9 +165,9 @@ export default function Home() {
         <div className="grid gap-5 lg:grid-cols-[0.82fr_1.18fr]">
           <div>
             <SectionHeading
-              eyebrow="Open Source"
-              title="生态仓库"
-              text="一些项目不一定直接面向终端用户，但它们支撑着播放器、创作工具和 Agent 实验的演进。"
+              eyebrow="Frameworks & Core"
+              title="框架、内核与生态"
+              text="除终端应用外，我们也维护跨平台原生 UI 框架、播放内核与插件生态。"
             />
           </div>
 
@@ -171,7 +176,7 @@ export default function Home() {
               return (
                 <a
                   key={project.name}
-                  href={project.repo}
+                  href={project.website ?? project.repo}
                   target="_blank"
                   rel="noreferrer"
                   className="glass-panel group grid gap-4 rounded-lg p-5 sm:grid-cols-[1fr_auto]"
@@ -180,7 +185,7 @@ export default function Home() {
                     <div className="flex flex-wrap items-center gap-3">
                       <h3 className="text-lg font-semibold">{project.name}</h3>
                       <span className="rounded-md border border-white/10 bg-white/5 px-2 py-0.5 text-xs text-white">
-                        {project.status}
+                        {project.subtitle}
                       </span>
                     </div>
                     <p className="mt-2 text-sm leading-6 text-white">
@@ -193,6 +198,29 @@ export default function Home() {
                 </a>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
+        <div className="glass-panel grid items-center gap-6 rounded-lg p-7 sm:p-10 lg:grid-cols-[1fr_auto]">
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.28em] text-white">
+              Research
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-normal sm:text-4xl">
+              AimesSoft Research
+            </h2>
+            <p className="mt-4 text-base leading-7 text-white">
+              发布我们在真实软件中的技术报告、工程笔记与实验记录，涵盖由 agent 操作的软件、agent 基础设施、媒体系统与原生框架。
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <TextLink href="/research/zh/" label="进入 Research" />
+            <TextLink
+              href="/research/zh/tr-2026-01/"
+              label="AIMESSOFT-TR-2026-01"
+            />
           </div>
         </div>
       </section>
