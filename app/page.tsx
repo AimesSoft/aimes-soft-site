@@ -27,15 +27,57 @@ export default function Home() {
           className="brand-backdrop-image object-contain"
         />
       </div>
-      <section className="relative mx-auto flex min-h-[88svh] w-full max-w-7xl flex-col justify-center px-5 pb-16 pt-20 sm:px-8 lg:px-10">
+      <header className="relative z-20 mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 pt-6 sm:px-8 lg:px-10">
+        <a
+          href="/"
+          className="inline-flex items-center gap-2.5 text-base leading-none text-white transition hover:opacity-85"
+        >
+          <Image
+            src="/brand/logo2.webp"
+            alt=""
+            width={28}
+            height={28}
+            className="h-7 w-7 object-contain"
+          />
+          <span className="tracking-tight">
+            <span className="font-normal">Aimes</span>
+            <strong className="font-bold">Soft</strong>
+          </span>
+        </a>
+        <nav
+          aria-label="Site"
+          className="flex items-center gap-5 text-sm text-white/75 sm:gap-7"
+        >
+          <a href="#projects" className="hidden transition hover:text-white sm:inline">
+            Projects
+          </a>
+          <a href="#ecosystem" className="hidden transition hover:text-white sm:inline">
+            Frameworks
+          </a>
+          <a href="/research/" className="transition hover:text-white">
+            <span className="font-normal">AimesSoft</span>{" "}
+            <strong className="font-bold text-white">Research</strong>
+          </a>
+          <a
+            href="https://github.com/AimesSoft"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden transition hover:text-white sm:inline"
+          >
+            GitHub
+          </a>
+        </nav>
+      </header>
+
+      <section className="relative mx-auto flex min-h-[82svh] w-full max-w-7xl flex-col justify-center px-5 pb-16 pt-14 sm:px-8 lg:px-10">
         <div className="relative z-10 max-w-4xl">
           <div className="mb-2 inline-flex text-xl font-semibold text-white sm:text-2xl">
             人工智能，时间和爱。
           </div>
 
-          <h1 className="max-w-5xl text-balance text-[clamp(4.25rem,14vw,12.5rem)] font-black leading-[0.82] tracking-normal">
-            Aimes
-            <span className="block text-white/84">Soft</span>
+          <h1 className="max-w-5xl text-balance text-[clamp(4.25rem,14vw,12.5rem)] leading-[0.84] tracking-tight">
+            <span className="block font-normal text-white/90">Aimes</span>
+            <span className="block font-black text-white">Soft</span>
           </h1>
 
           <p className="mt-8 max-w-2xl text-balance text-lg leading-8 text-white sm:text-xl">
@@ -163,7 +205,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
+      <section
+        id="ecosystem"
+        className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 lg:px-10"
+      >
         <div className="grid gap-5 lg:grid-cols-[0.82fr_1.18fr]">
           <div>
             <SectionHeading
@@ -210,8 +255,18 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.28em] text-white">
               Research
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-normal sm:text-4xl">
-              AimesSoft Research
+            <h2 className="mt-3 inline-flex items-center gap-3 text-3xl tracking-tight sm:text-4xl">
+              <Image
+                src="/brand/logo2.webp"
+                alt=""
+                width={34}
+                height={34}
+                className="h-8 w-8 object-contain"
+              />
+              <span>
+                <span className="font-normal">AimesSoft</span>{" "}
+                <strong className="font-bold">Research</strong>
+              </span>
             </h2>
             <p className="mt-4 text-base leading-7 text-white">
               发布我们在真实软件中的技术报告、工程笔记与实验记录，涵盖由 agent 操作的软件、agent 基础设施、媒体系统与原生框架。
