@@ -11,7 +11,7 @@ const projectButtonClassName =
   "inline-flex h-10 items-center rounded-lg border border-white/12 bg-white/7 px-3.5 text-sm font-medium text-white transition hover:border-white/28 hover:bg-white hover:!text-black hover:[&_*]:!text-black";
 
 export default function Home() {
-  const totalStars = 2000;
+  const totalStars = 2100;
 
   return (
     <main className="relative isolate min-h-screen overflow-hidden">
@@ -119,9 +119,11 @@ export default function Home() {
                         {project.website ? (
                           <TextLink href={project.website} label="官网入口" />
                         ) : null}
-                        <span className={projectButtonClassName}>
-                          <span>Stars {project.stars}</span>
-                        </span>
+                        {project.stars ? (
+                          <span className={projectButtonClassName}>
+                            <span>Stars {project.stars}</span>
+                          </span>
+                        ) : null}
                       </div>
                     </div>
                   </div>
